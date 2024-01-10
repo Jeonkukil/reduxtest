@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import AAAA from "./screen/AAAA";
+import BBBB from "./screen/BBBB";
+import CCCC from "./screen/CCCC";
+import DDDD from "./screen/DDDD";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<AAAA />}></Route>
+        <Route path="/b-page" element={<BBBB></BBBB>} />
+        <Route path="/c-page" element={<CCCC></CCCC>} />
+        <Route path="/d-page" element={<DDDD></DDDD>} />
+      </Routes>
+    </Router>
   );
 }
 
